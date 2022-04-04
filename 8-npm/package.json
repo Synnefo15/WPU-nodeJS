@@ -1,0 +1,15 @@
+{
+  "name": "8-npm",
+  "version": "1.0.0",
+  "description": "belajar nodeJs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rafi",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.5.2"
+  }
+}
