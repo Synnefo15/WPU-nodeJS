@@ -1,0 +1,14 @@
+{
+  "name": "contact-app",
+  "version": "1.0.0",
+  "description": "buat contact App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rafi cahyaputra",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^16.2.0"
+  }
+}
