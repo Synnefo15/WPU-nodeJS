@@ -1,15 +1,29 @@
-console.log(process.argv);
+const yargs = require('yargs');
+const contacts = require('./contacts');
 
+yargs.command({
+	command: 'add',
+	describe: 'Menambah kontak baru',
+	builder: {
+		nama: {
+			describe: 'Nama Lengkap',
+			demandOption: true,
+			type: 'string',
+		},
+		email: {
+			describe: 'email',
+			demandOption: false,
+			type: 'string',
+		},
+		hp: {
+			describe: 'No Hp',
+			demandOption: true,
+			type: 'string',
+		},
+	},
+	handler(argv) {
+		contacts.simpanContact(argv.nama,argv.email,argv.hp)
+	},
+})
 
-
-
-// const contacts = require('./contacts'); // % lokal
-
-// const main = async () => {
-// 	const nama = await contacts.tulisPertanyaan('Masukkan nama anda : ');
-// 	const umur = await contacts.tulisPertanyaan('Masukkan umur anda :');
-// 	const hp = await contacts.tulisPertanyaan('Masukkan no HP anda : ');
-
-// 	contacts.simpanContact(nama, umur, hp);
-// };
-// main();
+yargs.parse();
