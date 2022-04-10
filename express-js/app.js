@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 	// 	email : 'rafi@gmail.com',
 	// 	hp : '09138213'
 	// })
-	res.sendFile('./index.html', { root: __dirname });
+	res.sendFile('/index.html', { root: __dirname });
 });
 
 app.get('/about', (req, res) => {
