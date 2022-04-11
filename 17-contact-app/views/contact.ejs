@@ -1,0 +1,43 @@
+<div class="container mt-4">
+	<div class="row">
+		<div class="col-md-8">
+			<h3>Daftar Contact</h3>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Nama</th>
+						<th scope="col">Telp</th>
+						<th scope="col">Email</th>
+						<th scope="col">Aksi</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- &---- Cek kosing atau gk ------>
+					<% if (contacts.length===0) { %>
+					<tr>
+						<td colspan="4">
+							<div class="alert alert-danger" role="alert">Data Kosong</div>
+						</td>
+					</tr>
+
+					<% } %>
+					<!-- &---- Looping ---- -->
+					<% contacts.forEach((contact,i) => {i++ %>
+					<tr>
+						<th scope="row"><%= i++ %></th>
+						<td><%= contact.nama %></td>
+						<td><%= contact.nohp %></td>
+						<td><%= contact.email %></td>
+						<td>
+							<a href="/contact/<%= contact.nama %> " class="btn btn-success"
+								><i class="fas fa-info-circle"></i> detail
+							</a>
+						</td>
+					</tr>
+					<% }) %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
