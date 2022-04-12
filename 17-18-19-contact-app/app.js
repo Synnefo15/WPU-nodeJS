@@ -87,7 +87,6 @@ app.get('/contact/add', (req, res) => {
 });
 
 // &---- Proses data contact ----
-// TODO data contact
 app.post(
 	'/contact',
 	[
